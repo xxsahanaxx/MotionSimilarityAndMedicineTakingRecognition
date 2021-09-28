@@ -7,7 +7,7 @@
 ### <i> OBJECTIVE: </i> 
 <br/><br/> 
 
-## Project Goals: 
+## Project Goals 
 
 ## Project Structure
 
