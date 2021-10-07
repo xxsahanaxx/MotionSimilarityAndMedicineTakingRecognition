@@ -10,7 +10,7 @@ import numpy as np
 import os
 
 # Path for exported data, numpy arrays as frames
-DATA_PATH = "/Users/sahanasrinivasan/Desktop/COMPSYS700A/actionDetectionTF/dataset"
+DATA_PATH = os.path.join(os.getcwd(), "dataset", "keypoint_dataset")
 train_types = ['LSTM','GRU']
 
 # Exercises that we try to detect

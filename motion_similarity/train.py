@@ -153,15 +153,16 @@ if __name__ == "__main__":
     
     # Check if the script is set to train from scratch (train = True) 
     if train == True:
+        folder_path = folder_setup.os.path.join(folder_setup.os.getcwd(), "res")
         # If the model is an LSTM one 
         if(RNN_type == "LSTM"):
             # Open the respective loss CSV file and clear it 
-            open('lossLSTM.csv', mode='w').close()
+            open(folder_path+'lossLSTM.csv', mode='w').close()
             model = train_model(model, 'LSTMexercises.h5', os.path.join(loc,"models"))
         # If the model is a GRU one
         elif(RNN_type == "GRU"):
             # Open the respective loss CSV file and clear it 
-            open('lossGRU.csv', mode='w').close()
+            open(folder_path+'lossGRU.csv', mode='w').close()
             model = train_model(model, 'GRUexercises.h5', os.path.join(loc,"models"))
     else:
         # If the model is an LSTM one 

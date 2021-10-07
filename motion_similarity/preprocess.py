@@ -41,8 +41,8 @@ def preprocess_frames(loc):
     X = np.array(sequences)
     y = to_categorical(labels).astype(int)
 
-    np.save(os.path.join(loc, "X_five"), arr=X)
-    np.save(os.path.join(loc, "y_five"), arr=y)
+    np.save(os.path.join(loc, "res", "X_five"), arr=X)
+    np.save(os.path.join(loc, "res", "y_five"), arr=y)
 
 '''
 This function loads data from the location/directory specified 
@@ -55,8 +55,8 @@ by the user. Test data contains 8% of the samples.
 '''
 def load_train_data(loc):
     # Load numpy arrays
-    X = np.load(os.path.join(loc,"X_five.npy"))
-    y = np.load(os.path.join(loc,"y_five.npy"))
+    X = np.load(os.path.join(loc,"res","X_five.npy"))
+    y = np.load(os.path.join(loc,"res","y_five.npy"))
 
     # Train-test split
     global X_train, X_test, y_train, y_test

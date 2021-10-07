@@ -61,8 +61,9 @@ def test_predictions_on_test_set(loc, model, RNN_type):
     ytrue = np.argmax(y_test, axis=1).tolist()
     yhat = np.argmax(yhat, axis=1).tolist()
 
+    file_path = folder_setup.os.path.join(folder_setup.os.getcwd(), "res", "testPred"+RNN_type+".csv")
     # Save predictions made on test samples in a CSV
-    with open('testPred'+RNN_type+'.csv', 'w', encoding='UTF8',newline='') as f:
+    with open(file_path, 'w', encoding='UTF8',newline='') as f:
         writer = csv.writer(f)
         writer.writerow(['ytrue','yhat'])
         for i, j in zip(ytrue,yhat):

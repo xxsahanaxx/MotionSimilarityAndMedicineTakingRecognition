@@ -24,7 +24,7 @@ def train_combined(arguments):
         print("Need a model name to store weights to, please input it using --model_name and try again!")
         quit()
 
-    # If the dataset does not exist in path, create it 
+    # If the dataset does not exist in path, throw error
     if not os.path.exists(arguments.dataset_path): 
         print("Dataset path invalid, please check that the right path is referenced in --dataset_path and try again!")
         quit()
