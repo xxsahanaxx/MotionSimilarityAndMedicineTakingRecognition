@@ -1,0 +1,10 @@
+certifi==2021.5.30
+tensorflow==2.4.1
+#tensorflow_gpu==2.4.1
+opencv-python
+sklearn
+pandas
+matplotlib
+mediapipe
+#torch
+#torchvision
