@@ -1,9 +1,10 @@
-# from medicine_taking.Run import FeatExtractor, RnnModel
-# from medicine_taking.Run import VGGRNN
-# from medicine_taking.Train import build_model,build_feat_extractor
-# Sahana’s import
-from motion_similarity import train as exercise_train
-from motion_similarity import test
+from medicine_taking.Run import FeatExtractor, RnnModel
+from medicine_taking.Run import VGGRNN
+from medicine_taking.Train import build_model,build_feat_extractor
+
+# Sahana’s imports
+from exercise_recognition import train as exercise_train
+from exercise_recognition import test
 
 import torch
 import sys, os, warnings
@@ -24,14 +25,14 @@ def run_combined(context):
         sys.exit()
 
     # CPU or GPU
-    #device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
  
-    # if context.model_type == "VGG":
-    #     CAM_CONSTANT = 0
-    #     FROM_WEBCAM = True # run the webcam
-    #     VGGRNN()
+    if context.model_type == "VGG":
+        CAM_CONSTANT = 0
+        FROM_WEBCAM = True # run the webcam
+        VGGRNN()
         
-    if context.model_type != "VGG": # the LSTM model
+    if context.model_type != "VGG": # the LSTM model/GRU model
         # Change variables
         exercise_train.RNN_type = arguments.model_type
         exercise_train.loc = os.getcwd()

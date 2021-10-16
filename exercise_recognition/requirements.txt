@@ -1,0 +1,8 @@
+certifi==2021.5.30
+tensorflow==2.4.1
+opencv-python
+numpy 
+sklearn
+pandas
+matplotlib
+mediapipe

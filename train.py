@@ -1,7 +1,9 @@
-from motion_similarity import folder_setup
-from motion_similarity import train as exercise_train
-from motion_similarity.train import define_model as exercise_define_model 
-from motion_similarity.train import train_model as exercise_train_model
+from exercise_recognition import folder_setup
+from exercise_recognition import train as exercise_train
+from exercise_recognition.train import define_model as exercise_define_model 
+from exercise_recognition.train import train_model as exercise_train_model
+
+# Ninger's imports
 from medicine_taking.Train import build_feat_extractor
 from medicine_taking.Train import build_model
 from medicine_taking.Train import trainVggRnn
@@ -30,7 +32,7 @@ def train_combined(arguments):
         quit()
 
     # CPU or GPU
-    #device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu") 
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu") 
 
     # Define the model 
     if(arguments.model_type != "VGG"):
@@ -63,10 +65,10 @@ def train_combined(arguments):
 if __name__ == '__main__':
     # Create an ArgumentParser for each of the parameters 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--dataset_path', type=str, default='./dataset')#, choices=['./dataset','./dataset/keypoint_dataset','./dataset/image_dataset'])
+    parser.add_argument('--dataset_path', type=str, default='./dataset')
     parser.add_argument('--model_path', type=str, default='./models')
     parser.add_argument('--model_name', type=str)
-    parser.add_argument('--model_type', type=str, choices=['VGG','LSTM'])
+    parser.add_argument('--model_type', type=str, choices=['VGG','LSTM','GRU'])
 
     # Parse them and begin training
     arguments = parser.parse_args()
