@@ -1,0 +1,11 @@
+certifi==2021.5.30 
+tensorflow==2.4.1
+numpy
+opencv-python
+sklearn
+pandas
+matplotlib
+mediapipe
+torch
+torchvision
+tqdm
