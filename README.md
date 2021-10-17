@@ -283,22 +283,6 @@ $ python train.py --model_path <model_path> --model_name <model_name> --model_ty
 <br>
 
 ## Experimental Results 
-During the system implementation, we need to train and test our model, so here are the result:
-
-The training result can be view by Tensorboard:
-Motion Similarity Analysis with Exercise Recognition:
-
-Medicine Consumption Actions:
-Training:
-<div align="center">
-<img src="https://github.com/Ninger-Gong/MotionSimilarityAndMedicineTakingRecognition/blob/main/medicine_taking/Training_Result.png" width=470>
-<p>- Training accuracy -</p>
-</div>
-
-The result of testing would be:
-Drinking water          |  Taking Medicine
-:-------------------------:|:-------------------------:
-![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/61758760/137619414-2b9c5c07-00dd-40ac-b4ed-33803c63b5cb.gif) | ![ezgif com-gif-maker (4)](https://user-images.githubusercontent.com/61758760/137619423-f40b4ab0-251a-4a26-8793-edc21087a712.gif)
 
 ### <u> Motion Similarity Analysis with Exercise Recognition: </u>
 
