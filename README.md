@@ -7,7 +7,6 @@
 <br/>
 This project is part of a research area with HealthBots in the UoA CARES sector. 
 <br/>
-<br/>
 
 ### <i> OBJECTIVE: </i> To research, analyse and develop an 'exercise and medicine consumption recognition' system for elderly COPD patients to use from the comforts of their home
 <br/>
@@ -28,6 +27,8 @@ The Intel RealSense D435 camera was purchased using the project budget for testi
 <br>
 
 ## Table of Contents
+=======
+
 * [Project Goals](#project-goals)
 * [Poject Structure](#project-structure)
 * [Project Requirements and Dependencies](#project-requirements-and-dependencies)
@@ -42,11 +43,12 @@ The Intel RealSense D435 camera was purchased using the project budget for testi
 * [References](#references)
 <br>
 <br>
+=======
+
 
 ## Project Goals 
 1. Determining if a prescribed exercise is being performed, and to what accuracy
 2. Determining if a prescribed medicine is being consumed 
-<br>
 <br>
 
 ## Project Structure
@@ -79,7 +81,7 @@ This is the structure of our final project. The two project goals have their own
 ## Project Requirements and Dependencies
 
 ### <u> Requirements: </u>
-- ​​Visual Studio Code
+- Visual Studio Code
 - Anaconda Navigator
 - Python 3.8
 
@@ -101,6 +103,7 @@ This is the structure of our final project. The two project goals have their own
 - Intel RealSense D435 depth camera
 <br>
 <br>
+=======
 
 ## Project System Diagram
 
@@ -137,7 +140,7 @@ $ pip install -r requirements.txt
 ``` 
 This should set the project up and running for use.
 
-6. **VERY IMPORTANT**: Check that every file in each submodule's folder has the right imports:
+> 6. **VERY IMPORTANT**: Check that every file in each submodule's folder has the right imports:
 ```
 from <sub-module_name> import <filename_from_submodule>
 ``` 
@@ -286,6 +289,22 @@ $ python train.py --model_path <model_path> --model_name <model_name> --model_ty
 <br>
 
 ## Experimental Results 
+During the system implementation, we need to train and test our model, so here are the result:
+
+The training result can be view by Tensorboard:
+Motion Similarity Analysis with Exercise Recognition:
+
+Medicine Consumption Actions:
+Training:
+<div align="center">
+<img src="https://github.com/Ninger-Gong/MotionSimilarityAndMedicineTakingRecognition/blob/main/medicine_taking/Training_Result.png" width=470>
+<p>- Training accuracy -</p>
+</div>
+
+The result of testing would be:
+Drinking water          |  Taking Medicine
+:-------------------------:|:-------------------------:
+![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/61758760/137619414-2b9c5c07-00dd-40ac-b4ed-33803c63b5cb.gif) | ![ezgif com-gif-maker (4)](https://user-images.githubusercontent.com/61758760/137619423-f40b4ab0-251a-4a26-8793-edc21087a712.gif)
 
 ### <u> Motion Similarity Analysis with Exercise Recognition: </u>
 
