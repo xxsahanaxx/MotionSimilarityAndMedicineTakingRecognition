@@ -25,6 +25,20 @@ How this is done is by using two approaches, split by functionality of exercise 
 The Intel RealSense D435 camera was purchased using the project budget for testing with depth images, but could not be used with lab machines due to lockdown restrictions. 
 <br/>
 
+## Table of Content
+* [Project Goals](#project-goals)
+* [Poject Structure](#project-structure)
+* [Project Requirements and Dependencies](#project-requirements-and-dependencies)
+* [Project System Diagram](#project-system-diagram)
+* [Project Setup](#project-setup)
+* [Dataset](#dataset)
+* [Motion Similarity Analysis with Exercise Recognition](#motion-similarity-analysis-with-exercise-recognition)
+* [Medicine Consumption Actions](#medicine-comsumption-actions)
+* [Training](#training)
+* [Testing](#testing)
+* [Experimental Results](#experimental-results)
+* [References](#references)
+
 ## Project Goals 
 1. Determining if a prescribed exercise is being performed, and to what accuracy
 2. Determining if a prescribed medicine is being consumed 
