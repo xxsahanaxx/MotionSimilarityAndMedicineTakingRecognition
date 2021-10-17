@@ -53,6 +53,12 @@ pip install -r requirements.txt
 ```
 python run.py 
 ```
+
+The model can be runned and tested in Google Colabotory
+Please download the whole folder and upload the .ipynb files to your Google Colab
+Remember to change the directory of dataset and test video into the drive folder that you just save.
+Then just Give a Roll!
+
 - Note that the inference is set on the test video file by default. 
 - To change it, simply set ``` FROM_WEBCAM = True ``` in the config. options at mylib/Config.py
 - Trained model weights (for this example) can be downloaded from from the folder called weights. Make sure you extract them into the folder 'weights'.
