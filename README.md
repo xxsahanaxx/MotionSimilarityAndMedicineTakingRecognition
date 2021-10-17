@@ -7,7 +7,6 @@
 <br/>
 This project is part of a research area with HealthBots in the UoA CARES sector. 
 <br/>
-<br/>
 
 ### <i> OBJECTIVE: </i> To research, analyse and develop an 'exercise and medicine consumption recognition' system for elderly COPD patients to use from the comforts of their home
 <br/>
@@ -24,12 +23,11 @@ How this is done is by using two approaches, split by functionality of exercise 
 > <b> More information on both approaches is detailed in exercise_recognition and medicine_taking submodules. </b>
 
 The Intel RealSense D435 camera was purchased using the project budget for testing with depth images, but could not be used with lab machines due to lockdown restrictions. 
-<br/><br/>
+<br/>
 
 ## Project Goals 
 1. Determining if a prescribed exercise is being performed, and to what accuracy
 2. Determining if a prescribed medicine is being consumed 
-<br>
 <br>
 
 ## Project Structure
@@ -62,7 +60,7 @@ This is the structure of our final project. The two project goals have their own
 ## Project Requirements and Dependencies
 
 ### <u> Requirements: </u>
-- ​​Visual Studio Code
+- Visual Studio Code
 - Anaconda Navigator
 - Python 3.8
 
