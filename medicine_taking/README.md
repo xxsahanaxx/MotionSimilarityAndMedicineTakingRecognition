@@ -4,9 +4,11 @@ Video classification using VGG16 as a feature extractor and seasoning with RNN. 
 
 > A simple RNN is used to better classify temporal frame sequences from videos.
 
-Cricket batting           |  Cricket batting/bowling
+Drinking water          |  Taking Medicine
 :-------------------------:|:-------------------------:
-![bat](mylib/misc/bat.gif?raw=true "bat")  |  ![bowl](mylib/misc/bowl.gif?raw=true "bpwl") 
+![drinking1](https://user-images.githubusercontent.com/61758760/137617994-a5770f41-c982-475c-a927-70e1b0fd534d.gif) ![TakingMedicine1](https://user-images.githubusercontent.com/61758760/137618000-5c29585b-eca6-49c5-930f-7bda6652dba1.gif)
+
+
 
 --- 
 
@@ -50,23 +52,23 @@ python run.py
 ```
 - Note that the inference is set on the test video file by default. 
 - To change it, simply set ``` FROM_WEBCAM = True ``` in the config. options at mylib/Config.py
-- Trained model weights (for this example) can be downloaded from [**here**](https://drive.google.com/file/d/1mGm9jnZhelskbSzYAWWQoNcGa3mz95OL/view?usp=drivesdk). Make sure you extract them into the folder 'weights'.
+- Trained model weights (for this example) can be downloaded from from the folder called weights. Make sure you extract them into the folder 'weights'.
 - The class probabilities and inference time per frames is also displayed:
 ```
-[INFO] Frame acc. predictions: 0.91895014
-Frame inference in 0.0030 seconds
+[INFO] Frame acc. predictions: 0.6396240741014482
+Frame inference in 0.0770 seconds
 ```
-- You can also chose to send prediction accuracies over the mail if desired. Follow the instructions in mylib>Mailer.py (to setup the sender mail).
-- Enter the receiver mail in the config. options at mylib/Config.py
 
 <div align="center">
-<img src="https://github.com/saimj7/Video-Classification-in-Real-Time/blob/master/mylib/misc/alert.jpg" width=500>
+<img src="https://github.com/Ninger-Gong/MotionSimilarityAndMedicineTakingRecognition/blob/main/medicine_taking/VGG16_Structure.png" width=500>
 <p>- Predictions alert -</p>
 </div>
 
 - In case of severe false positivies, make sure to optimize the threshold and positive_frames parameters to further narrow down the predictions. Please refer config.
+
+The threshold of prediction accuracy can be changed, based on the actual testing result
 ```
-Threshold = 0.50
+Threshold = 0.60
 if pred >= Threshold:
 ```
 
@@ -82,18 +84,42 @@ if total_frames > 5:
 - Some image processing is required before training on your own data! 
 - In 'Preprocessing.ipynb' file, the frames from each video classes are extracted and sorted into respective folders.
 - Note that the frames are resized to 224x224 dimensions (which is VGG16 input layer size).
-- The dataset can be downloaded from [**here**](https://www.crcv.ucf.edu/data/UCF101.php).
-
+- The dataset can be download from here: https://drive.google.com/drive/folders/1p2It1lzbfLQafYkBmRklXd7Oa3l5HQ0w
+- with the image_data set
 ### Training:
 - 'Train.ipynb', as the name implies trains your model.
 - Training is visualized with the help of TensorBoard. Use the command:
 ```
-tensorboard --logdir data/_training_logs/rnn
+%reload_ext tensorboard
+%tensorboard --logdir='/content/drive/Shareddrives/Part IV Research Project/Medicine Action/data/_training_logs/rnn' --host=127.0.0.1
 ```
 <div align="center">
-<img src="https://github.com/saimj7/Video-Classification-in-Real-Time/blob/master/mylib/misc/train.jpg" width=470>
+<img src="https://github.com/Ninger-Gong/MotionSimilarityAndMedicineTakingRecognition/blob/main/medicine_taking/Training_Result.png" width=470>
 <p>- Training accuracy -</p>
 </div>
+
+### Please notice the folder of this part should like:
+- medicine_taking
+  - weights
+  - data
+     - Train
+     - Val
+     - _training_logs
+  - dataset
+     - Class1
+     - Class2
+  - tests
+  - mylib
+  - Train.py
+  - Train.ipynb
+  - Run.py
+  - Run.ipynb
+  - requirements.txt
+  - Preprocessing.py
+  - Preprocessing.ipynb
+
+The folder data will be created after running the Preprocessing.py.
+The dataset video should be saved in dataset folder, under two classes folder
 
 - Make sure to review the parameters in config. options at mylib/Config.py
 - You will come across the parameters in Train.ipynb, they must be same during the training and inference.
@@ -103,13 +129,15 @@ tensorboard --logdir data/_training_logs/rnn
 
 ***Main:***
 - VGG16 paper: https://arxiv.org/pdf/1409.1556.pdf
-- UCF101 Action Recognition Data Set: https://www.crcv.ucf.edu/data/UCF101.php
 
 ***Optional:***
 - TensorBoard: https://www.tensorflow.org/tensorboard
+- 
 
 ## Next steps
 - Investigate and benchmark different RNN architectures for better classifying the temporal sequences.
+- Change the VGG16 to Inception v3 model
+- add more videos for a better performance of the model
 
 <p>&nbsp;</p>
 
@@ -125,11 +153,9 @@ tensorboard --logdir data/_training_logs/rnn
 - **Option 2**
     - 👯 Clone this repo:
     ```
-    $ git clone https://github.com/saimj7/Action-Recognition-in-Real-Time.git
+    $ git clone 
     ```
 
 - **Roll it!**
 
 ---
-
-saimj7/ 06-09-2020 © <a href="http://saimj7.github.io" target="_blank">Sai_Mj</a>.
