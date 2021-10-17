@@ -110,17 +110,17 @@ Below are quick summaries of what each file does. A clearer overview is document
 
 augment.py - augments the dataset by scaling the co-ordinates to 0.75x and 1.25x
 
-folder_setup.py - initalises variables that will be used in other parts of the program, and sets up folders for a new dataset path
+[folder_setup.py](https://github.com/UoA-CARES-Student/MotionSimilarityAndMedicineTakingRecognition/blob/main/exercise_recognition/folder_setup.py) - initalises variables that will be used in other parts of the program, and sets up folders for a new dataset path
 
-mediapipe_interpreter.py - helps with extracting the right co-ordinates from the images and plots them on the image
+[mediapipe_interpreter.py](https://github.com/UoA-CARES-Student/MotionSimilarityAndMedicineTakingRecognition/blob/main/exercise_recognition/mediapipe_interpreter.py) - helps with extracting the right co-ordinates from the images and plots them on the image
 
-obtain_keypoints.py - gathers Mediapipe co-ordinates and image frames for every video captured from webcam
+[obtain_keypoints.py](https://github.com/UoA-CARES-Student/MotionSimilarityAndMedicineTakingRecognition/blob/main/exercise_recognition/obtain_keypoints.py) - gathers Mediapipe co-ordinates and image frames for every video captured from webcam
 
-plot_graphs.py - visualises the accuracy and loss curves from training, with the help of 2 CSV files labelled lossLSTM and lossGRU in ./res directory of submodule.
+[plot_graphs.py](https://github.com/UoA-CARES-Student/MotionSimilarityAndMedicineTakingRecognition/blob/main/exercise_recognition/plot_graphs.py) - visualises the accuracy and loss curves from training, with the help of 2 CSV files labelled lossLSTM and lossGRU in ./res directory of submodule.
 
 preprocess.py - preprocesses data from the dataset folder and saves them into numpy arrays of X and y in the ./res folder.
 
-requirements.txt - stores all the requirements needed to be installed for the correct functioning of the program
+[requirements.txt](https://github.com/UoA-CARES-Student/MotionSimilarityAndMedicineTakingRecognition/blob/main/exercise_recognition/requirements.txt) - stores all the requirements needed to be installed for the correct functioning of the program
 
 test.py - runs the detections of the 2 models on GUI to visualise the prediction probabilities/results   
 
@@ -204,7 +204,7 @@ Heel-toe-walking  |  Hip strengthening | Toe-raises
 One advantage of this project is that it supports scalability. The exercises created in the dataset were meant to be prototypes. It is possible for the user to add more exercises to the dataset.
 <br/>
 
-### 1. <i> In folder_setup.py: </i>
+### 1. <i> In [folder_setup.py](https://github.com/UoA-CARES-Student/MotionSimilarityAndMedicineTakingRecognition/blob/main/exercise_recognition/folder_setup.py) </i>
 1. Change the macro 'DATA_PATH' on line 13 to point to the directory containing the keypoint_dataset. If in current directory, use 
 ```
 DATA_PATH = os.path.join(os.getcwd(), "dataset","keypoint_dataset")
@@ -225,7 +225,7 @@ The above command will make a new folder inside keypoint_dataset with the 'namet
 
 <br/>
 
-### 2. <i> In obtain_keypoints.py </i>
+### 2. <i> In [obtain_keypoints.py](https://github.com/UoA-CARES-Student/MotionSimilarityAndMedicineTakingRecognition/blob/main/exercise_recognition/obtain_keypoints.py) </i>
 1. Note whether the dataset will be created using webcam or using a pre-recorded video. Read the documentation above create_data() and add line 151 with the required arguments for create_data().
 ```
 149 if __name__ == "__main__":
@@ -319,7 +319,7 @@ Setting train to 'True' will train the model on the selected dataset (from folde
 ```
 RNN_type = folder_setup.train_types[<index>]
 ```
-In folder_setup, both LSTM and GRU entries exist for 'train_types'. Selecting 0 as index for RNN_type chooses the LSTM model whle 1 for index is GRU.
+In [folder_setup.py](https://github.com/UoA-CARES-Student/MotionSimilarityAndMedicineTakingRecognition/blob/main/exercise_recognition/folder_setup.py), both LSTM and GRU entries exist for 'train_types'. Selecting 0 as index for RNN_type chooses the LSTM model whle 1 for index is GRU.
 Change these variables to the preferred ones. 
 
 4. By default, the models are stored in the directory ./models under the sub-module. To change this, check lines 161, 166, 170 and 173 and make the necessary changes to the 'os.path.join(loc,"models")' parameter for the use-case that fits your trials. 
@@ -386,7 +386,7 @@ Make any necessary changes to the lines. If only one model needs to be tested, u
 
 NOTE: test_predictions_on_test_set() only prints out the 4 calculated metrics for the test dataset. 
 
-4. The prediction probabilities of the models can be stored as CSV files for calculation purposes in ./res directory of the sub-module as 'predictionsmodel1.csv' and 'predictionsmodel2.csv'. To enable this, uncomment lines 135-137 and lines 146-148. 
+4. The prediction probabilities of the models can be stored as CSV files for calculation purposes in ./res directory of the sub-module as '[predictionsmodel1.csv](https://github.com/UoA-CARES-Student/MotionSimilarityAndMedicineTakingRecognition/tree/main/exercise_recognition/res/predictionsmodel1.csv)' and '[predictionsmodel2.csv](https://github.com/UoA-CARES-Student/MotionSimilarityAndMedicineTakingRecognition/tree/main/exercise_recognition/res/predictionsmodel2.csv)'. To enable this, uncomment lines 135-137 and lines 146-148. 
 5. Once everything seems perfect for the use-case, run test.py on the command line; <i> if import errors arise, go to 'Debugging' of this manual. </i>
 ```
 (<env_name>)$ python test.py 
