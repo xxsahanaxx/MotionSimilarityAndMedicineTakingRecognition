@@ -26,8 +26,7 @@ The Intel RealSense D435 camera was purchased using the project budget for testi
 <br>
 <br>
 
-## Table of Contents
-=======
+## <u> Table of Contents: </u>
 
 * [Project Goals](#project-goals)
 * [Poject Structure](#project-structure)
@@ -42,14 +41,11 @@ The Intel RealSense D435 camera was purchased using the project budget for testi
 * [Experimental Results](#experimental-results)
 * [References](#references)
 <br>
-<br>
-=======
-
 
 ## Project Goals 
 1. Determining if a prescribed exercise is being performed, and to what accuracy
 2. Determining if a prescribed medicine is being consumed 
-<br>
+
 
 ## Project Structure
 
@@ -102,8 +98,6 @@ This is the structure of our final project. The two project goals have their own
 ### Optional Hardware:
 - Intel RealSense D435 depth camera
 <br>
-<br>
-=======
 
 ## Project System Diagram
 
