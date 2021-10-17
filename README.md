@@ -319,4 +319,4 @@ Drinking water          |  Taking Medicine
 
 
 ## References 
-Detailed in submodules (./exercise_recognition/README.md and ./medicine_taking/README.md)
+Detailed in submodules [./exercise_recognition/README.md](https://github.com/UoA-CARES-Student/MotionSimilarityAndMedicineTakingRecognition/blob/main/exercise_recognition/README.md) and [./medicine_taking/README.md](https://github.com/UoA-CARES-Student/MotionSimilarityAndMedicineTakingRecognition/blob/main/medicine_taking/README.md)
