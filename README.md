@@ -81,8 +81,6 @@ This is the structure of our final project. The two project goals have their own
 ### Optional Hardware:
 - Intel RealSense D435 depth camera
 <br>
-<br>
-
 
 ## Project System Diagram
 
@@ -118,7 +116,7 @@ $ pip install -r requirements.txt
 ``` 
 This should set the project up and running for use.
 
-6. **VERY IMPORTANT**: Check that every file in each submodule's folder has the right imports:
+> 6. **VERY IMPORTANT**: Check that every file in each submodule's folder has the right imports:
 ```
 from <sub-module_name> import <filename_from_submodule>
 ``` 
