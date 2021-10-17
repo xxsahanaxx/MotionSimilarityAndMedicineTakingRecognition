@@ -238,8 +238,30 @@ and NOT
 ```
 import <filename_in_submodule>
 ```
+2. for Medicine taking action, before running the train.py script, please download the dataset from: https://drive.google.com/drive/folders/1hhkXXNbpBNc8AOkxsWIrTA59pRO_0rxV?usp=sharing
 
-2. To run the train.py script from main module (MotionSimilarityAndMedicineTakingRecognition), use the following argument structure:
+And the structure of the folder is:
+- medicine_taking
+  - weights
+  - data
+     - Train
+     - Val
+     - _training_logs
+  - dataset
+     - Class1
+     - Class2
+  - tests
+  - mylib
+     - Config.py
+     - Mailer.py
+  - Train.py
+  - Run.py
+  - requirements.txt
+  - Preprocessing.py
+
+	if you want to use your own dataset video, please put it in the dataset folder and under each class, and need to Preprocess the videos, the image frames would be saved into the data folder 
+
+3. To run the train.py script from main module (MotionSimilarityAndMedicineTakingRecognition), use the following argument structure:
 
 ```
 $ python train.py --dataset_path <dataset_path> --model_path <model_path> --model_name <model_name> --model_type <model_type>
@@ -268,7 +290,34 @@ For example:
 ```
 from exercise_recognition import folder_setup
 ```
+And the directory setup for Medicine taking action would be:
+- medicine_taking
+  - weights
+     - RNN.h5
+     - VGG.h5
+     - Feature_Extractor.h5
+  - data
+     - Train
+     - Val
+     - _training_logs
+  - dataset
+     - Class1
+     - Class2
+  - tests
+  - mylib
+     - Config.py
+     - Mailer.py
+  - Train.py
+  - Train.ipynb
+  - Train_Main.py
+  - Run.py
+  - Run.ipynb
+  - Run_Main.py
+  - requirements.txt
+  - Preprocessing.py
+  - Preprocessing.ipynb
 
+Please download the whole folder from https://drive.google.com/drive/folders/1hhkXXNbpBNc8AOkxsWIrTA59pRO_0rxV?usp=sharing -> Medicine Action folder
 2. To run the run.py script from main module (MotionSimilarityAndMedicineTakingRecognition), use the following argument structure:
 
 ```
