@@ -1,8 +1,10 @@
 # Video-Classification-in-Real-Time
 
-Video classification using VGG16 as a feature extractor and seasoning with RNN. Dataset used is self-created (including water drinking and taking medicine).
+Video classification using VGG16 as a feature extractor and seasoning with RNN. 
 
-> A simple RNN is used to better classify temporal frame sequences from videos.
+Dataset used is self-created (including water drinking and taking medicine).
+
+> A simple LSTM model is used to better classify temporal frame sequences from videos.
 
 Drinking water          |  Taking Medicine
 :-------------------------:|:-------------------------:
@@ -34,7 +36,7 @@ Drinking water          |  Taking Medicine
 
 <div align="center">
 <img src="https://github.com/Ninger-Gong/MotionSimilarityAndMedicineTakingRecognition/blob/main/medicine_taking/VGG16_Structure.png" width=570>
-<p>- Model architecture -</p>
+<p>- VGG 16 Model architecture -</p>
 </div>
 
 ---
@@ -64,7 +66,7 @@ Frame inference in 0.0770 seconds
 
 <div align="center">
 <img src="https://github.com/Ninger-Gong/MotionSimilarityAndMedicineTakingRecognition/blob/main/medicine_taking/LSTM_Structure.png" width=500>
-<p>- Predictions alert -</p>
+<p>- LSTM model structure -</p>
 </div>
 
 The result of testing would be:
@@ -80,20 +82,16 @@ Threshold = 0.60
 if pred >= Threshold:
 ```
 
-```
-if total_frames > 5:
-   print('[INFO] Sending mail...')
-```
-
-
 ## Pipeline
 
 ### Preprocessing:
-- Some image processing is required before training on your own data! 
+- Some image processing is required before training on your own data videos
 - In 'Preprocessing.ipynb' file, the frames from each video classes are extracted and sorted into respective folders.
-- Note that the frames are resized to 224x224 dimensions (which is VGG16 input layer size).
+- but please run the Preprocessing.py to deal with your own data on your own laptop
+- Note that the frames are resized to 224x224 dimensions (in order to fit with VGG16 input layer size).
 - The dataset can be download from here: https://drive.google.com/drive/folders/1p2It1lzbfLQafYkBmRklXd7Oa3l5HQ0w
 - with the image_data set
+
 ### Training:
 - 'Train.ipynb', as the name implies trains your model.
 - Training is visualized with the help of TensorBoard. Use the command:
@@ -129,7 +127,7 @@ if total_frames > 5:
 The folder data will be created after running the Preprocessing.py.
 The dataset video should be saved in dataset folder, under two classes folder
 
-- Make sure to review the parameters in config. options at mylib/Config.py
+- Make sure to check the parameters in config. options at mylib/Config.py
 - You will come across the parameters in Train.ipynb, they must be same during the training and inference.
 - If you would like to change them, simply do so in the training file and also in config. options.
 
@@ -137,13 +135,13 @@ The dataset video should be saved in dataset folder, under two classes folder
 
 ***Main:***
 - VGG16 paper: https://arxiv.org/pdf/1409.1556.pdf
+- LSTM paper: https://doi.org/10.1016/j.neunet.2005.06.042
+- This code is based on the code from Sai MJ's repo: https://github.com/saimj7/Action-Recognition-in-Real-Time
 
 ***Optional:***
 - TensorBoard: https://www.tensorflow.org/tensorboard
-- 
 
 ## Next steps
-- Investigate and benchmark different RNN architectures for better classifying the temporal sequences.
 - Change the VGG16 to Inception v3 model
 - add more videos for a better performance of the model
 
@@ -153,17 +151,12 @@ The dataset video should be saved in dataset folder, under two classes folder
 
 ## Thanks for the read & have fun!
 
-> To get started/contribute quickly (optional) ...
-
-- **Option 1**
-    - 🍴 Fork this repo and pull request!
-
-- **Option 2**
     - 👯 Clone this repo:
     ```
     $ git clone https://github.com/Ninger-Gong/MotionSimilarityAndMedicineTakingRecognition/blob/main/medicine_taking
     ```
 
-- **Roll it!**
+- **Just Run it!**
 
 ---
+
