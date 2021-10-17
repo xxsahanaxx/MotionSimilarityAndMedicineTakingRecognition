@@ -4,6 +4,7 @@ from exercise_recognition.train import define_model as exercise_define_model
 from exercise_recognition.train import train_model as exercise_train_model
 
 # Ninger's imports
+from medicine_taking import Train
 from medicine_taking.Train import build_feat_extractor
 from medicine_taking.Train import build_model
 from medicine_taking.Train import trainVggRnn
@@ -11,7 +12,7 @@ from medicine_taking.Train import trainVggRnn
 import os
 import sys
 import argparse
-#import torch
+import torch
 
 from warnings import filterwarnings
 filterwarnings('ignore')
@@ -40,6 +41,7 @@ def train_combined(arguments):
         folder_setup.DATA_PATH = arguments.dataset_path
 
         exercise_train.RNN_type = arguments.model_type
+        exercise_train.train = True
         exercise_train.loc = os.getcwd()
         model = exercise_define_model(exercise_train.RNN_type)
         print(model.summary())
@@ -55,10 +57,10 @@ def train_combined(arguments):
        model = exercise_train_model(model, arguments.model_name, arguments.model_path)
     else: 
         #for VGG16 model
-        medicine_taking.Train.POSITIVES_PATH_TRAIN = 'medicine_taking/data/Train/Class1/'
-        medicine_taking.Train.NEGATIVE_PATH_TRAIN = 'medicine_taking/data/Train/Class2/'
-        medicine_taking.Train.POSITIVES_PATH_VALID = 'medicine_taking/data/Val/Class1/'
-        medicine_taking.Train.NEGATIVES_PATH_VALID = 'medicine_taking/data/Val/Class2/'
+        Train.POSITIVES_PATH_TRAIN = 'medicine_taking/data/Train/Class1/'
+        Train.NEGATIVES_PATH_TRAIN = 'medicine_taking/data/Train/Class2/'
+        Train.POSITIVES_PATH_VALID = 'medicine_taking/data/Val/Class1/'
+        Train.NEGATIVES_PATH_VALID = 'medicine_taking/data/Val/Class2/'
         trainVggRnn()
 
 

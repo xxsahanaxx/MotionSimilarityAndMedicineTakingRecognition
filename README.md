@@ -272,10 +272,10 @@ from exercise_recognition import folder_setup
 2. To run the run.py script from main module (MotionSimilarityAndMedicineTakingRecognition), use the following argument structure:
 
 ```
-$ python train.py --model_path <model_path> --model_name <model_name> --model_type <model_type>
+$ python run.py --model_path <model_path> --model_name <model_name> --model_type <model_type>
 ```
 - model_path (optional): The relative path where the model should be stored, default is ./models
-- model_name: Name of the file to store trained weights to (for example: 'new.h5')
+- model_name: Name of the file to store trained weights to (for example: 'LSTMexercises.h5')
 - model_type: Type of model ("LSTM","GRU","VGG")
 
 3. If everything was successful, testing should begin.

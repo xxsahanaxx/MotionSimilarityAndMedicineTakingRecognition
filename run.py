@@ -1,6 +1,5 @@
-from medicine_taking.Run import FeatExtractor, RnnModel
+# Ninger's imports
 from medicine_taking.Run import VGGRNN
-from medicine_taking.Train import build_model,build_feat_extractor
 
 # Sahana’s imports
 from exercise_recognition import train as exercise_train

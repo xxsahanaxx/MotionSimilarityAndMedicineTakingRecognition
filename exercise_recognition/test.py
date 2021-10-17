@@ -102,6 +102,7 @@ def test_detections(model1, model2=None):
     predictions2 = []
     # Probability wizard kicks in when this threshold is crossed by any prediction
     threshold = 0.5
+    res2 = None
 
     count = 0
 
