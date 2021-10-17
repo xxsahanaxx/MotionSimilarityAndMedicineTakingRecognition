@@ -176,7 +176,7 @@ Extract the five folders (or just the three exercise folders) into ./dataset/key
 
 ### <u> b) For medicine taking recognition: </u>
 ```
- → image_dataset
+→ image_dataset
     → train
 	    → Class 1 (drinking water)
 	    → Class 2 (taking medicine)
@@ -205,7 +205,7 @@ This skeleton-based approach uses a Mediapipe pose detector, which is a CNN mode
 
 The second step is to feed these co-ordinates as features into a specialised RNN that has long-term learning capabilities. For the purpose of this project, LSTMs and GRUs were chosen, and comparisons were made based on predictions using the two. 
 
-More details on this submodule are documented in ./exercise_recognition/README.md.
+More details on this submodule are documented in [./exercise_recognition/README.md](https://github.com/UoA-CARES-Student/MotionSimilarityAndMedicineTakingRecognition/tree/main/exercise_recognition).
 <br>
 <br>
 
@@ -219,7 +219,8 @@ More details on this submodule are documented in ./exercise_recognition/README.m
 ### <u> Overview </u>
 VGG16: a pretrained VGG16 is used as a feature extractor in the system, and the structure of the model is:
 
-More details on this submodule are documented in ./medicine_taking/README.md.
+More details on this submodule are documented in
+[./medicine_taking/README.md](https://github.com/UoA-CARES-Student/MotionSimilarityAndMedicineTakingRecognition/tree/main/medicine_taking).
 <br>
 <br>
 
