@@ -105,7 +105,7 @@ def test_detections(model1, model2=None):
 
     count = 0
 
-    cam = cv2.VideoCapture("/Users/sahanasrinivasan/Desktop/COMPSYS700A/actionDetectionTF/testvids/heeltoe25.mp4", cv2.CAP_FFMPEG)
+    cam = cv2.VideoCapture(0)
     print("Live feed has been set up")
 
     # Set mediapipe model 
