@@ -1,6 +1,6 @@
 # Video-Classification-in-Real-Time
 
-Video classification using VGG16 as a feature extractor and seasoning with RNN. Dataset used is UCF101 (Cricket bowling and batting classes).
+Video classification using VGG16 as a feature extractor and seasoning with RNN. Dataset used is self-created (including water drinking and taking medicine).
 
 > A simple RNN is used to better classify temporal frame sequences from videos.
 
@@ -40,8 +40,9 @@ Drinking water          |  Taking Medicine
 ---
 
 **RNN:**
-- A standard LSTM is used. Note that you need GPU/CUDA support if you would like to run CUDnnLSTM layers in the model. 
-- Finally, the LSTM network is trained to distinguish between your desired class1 and 2 videos.
+- A standard LSTM is used. 
+- The model is using LSTM in the build_model(), Note that you need GPU/CUDA support if you would like to run CUDnnLSTM layers in the model. 
+- Finally, the LSTM network is trained to distinguish between your desired water drinking and taking medicine videos.
 
 ## Running Inference
 - Install all the required Python dependencies:
@@ -65,6 +66,11 @@ Frame inference in 0.0770 seconds
 <img src="https://github.com/Ninger-Gong/MotionSimilarityAndMedicineTakingRecognition/blob/main/medicine_taking/LSTM_Structure.png" width=500>
 <p>- Predictions alert -</p>
 </div>
+
+The result of testing would be:
+Drinking water          |  Taking Medicine
+:-------------------------:|:-------------------------:
+![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/61758760/137619414-2b9c5c07-00dd-40ac-b4ed-33803c63b5cb.gif) | ![ezgif com-gif-maker (4)](https://user-images.githubusercontent.com/61758760/137619423-f40b4ab0-251a-4a26-8793-edc21087a712.gif)
 
 - In case of severe false positivies, make sure to optimize the threshold and positive_frames parameters to further narrow down the predictions. Please refer config.
 
