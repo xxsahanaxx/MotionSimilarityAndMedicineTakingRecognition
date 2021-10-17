@@ -136,6 +136,7 @@ The dataset video should be saved in dataset folder, under two classes folder
 ***Main:***
 - VGG16 paper: https://arxiv.org/pdf/1409.1556.pdf
 - LSTM paper: https://doi.org/10.1016/j.neunet.2005.06.042
+- This code is based on the code from Sai MJ's repo: https://github.com/saimj7/Action-Recognition-in-Real-Time
 
 ***Optional:***
 - TensorBoard: https://www.tensorflow.org/tensorboard
@@ -159,5 +160,3 @@ The dataset video should be saved in dataset folder, under two classes folder
 
 ---
 
-### Reference
-This code is based on the code from Sai MJ's repo: https://github.com/saimj7/Action-Recognition-in-Real-Time
