@@ -6,7 +6,7 @@ Video classification using VGG16 as a feature extractor and seasoning with RNN. 
 
 Drinking water          |  Taking Medicine
 :-------------------------:|:-------------------------:
-![drinking1](https://user-images.githubusercontent.com/61758760/137617994-a5770f41-c982-475c-a927-70e1b0fd534d.gif) ![TakingMedicine1](https://user-images.githubusercontent.com/61758760/137618000-5c29585b-eca6-49c5-930f-7bda6652dba1.gif)
+![drinking1](https://user-images.githubusercontent.com/61758760/137617994-a5770f41-c982-475c-a927-70e1b0fd534d.gif) | ![TakingMedicine1](https://user-images.githubusercontent.com/61758760/137618000-5c29585b-eca6-49c5-930f-7bda6652dba1.gif)
 
 
 
@@ -25,13 +25,15 @@ Drinking water          |  Taking Medicine
 
 ## Background Theory
 **Feature extraction:**
-- Pretrained VGG16 is used as a feature extractor after fine tuning/unfreezing its 4 top layers.
-- A simple classifier is then connected to VGG16 and trained to identify if the frame belongs to class1 or 2. 
-- Then the top classifier is disconnected and only dense layer with 1024 output size is used to obtain the sparse representations of each frame. 
+- After fine tuning/unfreezing its four top layers, VGG16 is employed as a feature extractor.
+- After that, a basic movement classifier is coupled to VGG16 and trained to determine if the frame belongs to Drinking water or Taking Medicine. 
+- The top classifier is then disconnected, and the sparse representations of each frame are obtained using only a dense layer with a 1024 output size.
+
+
 - **Data to lstm format:** For each video frame, the sparse representations are stacked into a tensor of size (NUM_FRAMES, LOOK_BACK, 1024). 
 
 <div align="center">
-<img src="https://github.com/saimj7/Video-Classification-in-Real-Time/blob/master/mylib/misc/model.jpg" width=570>
+<img src="https://github.com/Ninger-Gong/MotionSimilarityAndMedicineTakingRecognition/blob/main/medicine_taking/VGG16_Structure.png" width=570>
 <p>- Model architecture -</p>
 </div>
 
@@ -60,7 +62,7 @@ Frame inference in 0.0770 seconds
 ```
 
 <div align="center">
-<img src="https://github.com/Ninger-Gong/MotionSimilarityAndMedicineTakingRecognition/blob/main/medicine_taking/VGG16_Structure.png" width=500>
+<img src="https://github.com/Ninger-Gong/MotionSimilarityAndMedicineTakingRecognition/blob/main/medicine_taking/LSTM_Structure.png" width=500>
 <p>- Predictions alert -</p>
 </div>
 
@@ -153,7 +155,7 @@ The dataset video should be saved in dataset folder, under two classes folder
 - **Option 2**
     - 👯 Clone this repo:
     ```
-    $ git clone 
+    $ git clone https://github.com/Ninger-Gong/MotionSimilarityAndMedicineTakingRecognition/blob/main/medicine_taking
     ```
 
 - **Roll it!**
