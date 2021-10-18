@@ -185,6 +185,7 @@ Extract the five folders (or just the three exercise folders) into ./dataset/key
 The frames dataset is used.
 The dataset is available to download at:
 https://drive.google.com/drive/folders/1jEgdxNEfob2ilfmO_04pKEGoXyEmCGmG
+And please change the directory of the dataset in medicine_taking.Train to the current directory.
 
 It contains two movements: Drinking water (class 1) and taking medicine (Class 2). The videos for the dataset were taken by webcam. The videos would be preprocessed into 140 frames and divided into train folder and val folder in the data folder. More information would be provided inside the submodule “Taking medicine action” README.md.
 <br>
@@ -239,15 +240,16 @@ and NOT
 import <filename_in_submodule>
 ```
 2. for Medicine taking action, before running the train.py script, please download the dataset from: https://drive.google.com/drive/folders/1hhkXXNbpBNc8AOkxsWIrTA59pRO_0rxV?usp=sharing
+Please download the ./data folder and ./weights folder and save the folders to the current one that you are working at based on the following directory structure.
 
 And the structure of the folder is:
 - medicine_taking
   - weights
-  - data
+  - data (the images frames after preprocessing the videos)
      - Train
      - Val
      - _training_logs
-  - dataset
+  - dataset (the dataset videos)
      - Class1
      - Class2
   - tests
@@ -296,11 +298,11 @@ And the directory setup for Medicine taking action would be:
      - RNN.h5
      - VGG.h5
      - Feature_Extractor.h5
-  - data
+  - data (the images frames after preprocessing the videos)
      - Train
      - Val
      - _training_logs
-  - dataset
+  - dataset (the dataset videos)
      - Class1
      - Class2
   - tests
@@ -317,7 +319,9 @@ And the directory setup for Medicine taking action would be:
   - Preprocessing.py
   - Preprocessing.ipynb
 
-Please download the whole folder from https://drive.google.com/drive/folders/1hhkXXNbpBNc8AOkxsWIrTA59pRO_0rxV?usp=sharing -> Medicine Action folder
+Please download the ./data folder and ./weights folder from https://drive.google.com/drive/folders/1hhkXXNbpBNc8AOkxsWIrTA59pRO_0rxV?usp=sharing
+to the current one that you are working at based on the above directory structure.
+
 2. To run the run.py script from main module (MotionSimilarityAndMedicineTakingRecognition), use the following argument structure:
 
 ```
