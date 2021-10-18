@@ -55,7 +55,45 @@ pip install -r requirements.txt
 ```
 python run.py 
 ```
+### Please notice the folder of this part should like:
+- medicine_taking
+  - weights
+     - RNN.h5
+     - VGG.h5
+     - Feature_Exctractor.h5
+  - data
+     - Train
+        - Class1
+        - Class2
+     - Val
+        - Class1
+        - Class2
+     - _training_logs
+  - dataset
+     - Class1
+     - Class2
+  - tests
+     - ... test videos
+  - mylib
+     - Config.py
+     - Mailer.py
+  - Train.py
+  - Train.ipynb
+  - Train_Main.py
+  - Run.py
+  - Run.ipynb
+  - Run_Main.py
+  - requirements.txt
+  - Preprocessing.py
+  - Preprocessing.ipynb
 
+The folder data will be created after running the Preprocessing.py.
+The dataset video should be saved in dataset folder, under two classes folder.
+The whole folder can be downloaded with the link: https://drive.google.com/drive/folders/1hhkXXNbpBNc8AOkxsWIrTA59pRO_0rxV?usp=sharing
+
+- Make sure to check the parameters in config. options at mylib/Config.py
+- You will come across the parameters in Train.ipynb, they must be same during the training and inference.
+- If you would like to change them, simply do so in the training file and also in config. options.
 The model can be runned and tested in Google Colabotory
 Please download the whole folder and upload the .ipynb files to your Google Colab
 Remember to change the directory of dataset and test video into the drive folder that you just save.
@@ -110,32 +148,7 @@ if pred >= Threshold:
 <p>- Training accuracy -</p>
 </div>
 
-### Please notice the folder of this part should like:
-- medicine_taking
-  - weights
-  - data
-     - Train
-     - Val
-     - _training_logs
-  - dataset
-     - Class1
-     - Class2
-  - tests
-  - mylib
-  - Train.py
-  - Train.ipynb
-  - Run.py
-  - Run.ipynb
-  - requirements.txt
-  - Preprocessing.py
-  - Preprocessing.ipynb
 
-The folder data will be created after running the Preprocessing.py.
-The dataset video should be saved in dataset folder, under two classes folder
-
-- Make sure to check the parameters in config. options at mylib/Config.py
-- You will come across the parameters in Train.ipynb, they must be same during the training and inference.
-- If you would like to change them, simply do so in the training file and also in config. options.
 
 ## References
 
